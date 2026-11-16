@@ -1,7 +1,4 @@
-body {
-    margin: 0;
-    padding: 2rem;
-    background: #F6F2E9;
-    color: #111111;
-    font-family: system-ui, sans-serif;
-}
+@import './base/tokens.css';
+@import './base/reset.css';
+@import './base/typography.css';
+@import './layout/grid.css';

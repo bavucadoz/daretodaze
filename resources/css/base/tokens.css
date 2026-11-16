@@ -1,0 +1,78 @@
+/* =========================================================
+   DARETODAZE — Design tokens (sumber: DESIGN_SYSTEM.md)
+   ========================================================= */
+
+/* Penanda tipe untuk variabel grid, agar tidak diwariskan ke elemen anak */
+@property --md {
+    syntax: '<integer>';
+    inherits: false;
+    initial-value: 6;
+}
+@property --lg {
+    syntax: '<integer>';
+    inherits: false;
+    initial-value: 12;
+}
+@property --lg-start {
+    syntax: '<integer> | auto';
+    inherits: false;
+    initial-value: auto;
+}
+
+:root {
+    /* Palet brand */
+    --color-obsidian: #111111;
+    --color-ivory: #F6F2E9;
+    --color-silver: #858585;
+    --color-scarlet: #E63946;
+    --color-acid-lime: #D9FF57;
+    --color-digital-blue: #B7C9F2;
+    --color-powder-pink: #D8A5C4;
+
+    /* Semantik */
+    --color-bg: var(--color-ivory);
+    --color-text: var(--color-obsidian);
+    --color-muted: #5F5F5F; /* lebih gelap dari Silver agar lolos kontras AA di atas Ivory */
+    --color-accent: var(--color-scarlet);
+    --color-line: color-mix(in srgb, var(--color-obsidian) 18%, transparent);
+    --color-focus: var(--color-scarlet);
+
+    /* Font */
+    --font-display: "Bodoni Moda", "Playfair Display", Didot, Georgia, serif;
+    --font-body: "Inter", "Space Grotesk", system-ui, sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+
+    /* Skala tipografi (fluid) */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+    --text-2xl: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+    --text-3xl: clamp(2rem, 1.4rem + 2.4vw, 3.5rem);
+    --text-4xl: clamp(2.75rem, 1.6rem + 4.6vw, 6rem);
+    --text-hero: clamp(3.5rem, 2rem + 9vw, 11rem);
+
+    /* Jarak */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4.5rem;
+    --space-9: 7rem;
+
+    /* Layout */
+    --content-width: 1440px;
+    --reading-width: 720px;
+    --gutter: clamp(1rem, 0.5rem + 2vw, 2.5rem); /* 16px di mobile, sampai 40px di desktop */
+    --tap-target: 44px;
+
+    /* Gerak (Design System: 180–300ms, utamakan opacity/transform) */
+    --duration-fast: 180ms;
+    --duration-base: 240ms;
+    --duration-slow: 300ms;
+    --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
