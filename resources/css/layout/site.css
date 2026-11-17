@@ -1,0 +1,9 @@
+/* Footer selalu menempel di bawah, walau konten halaman pendek */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
