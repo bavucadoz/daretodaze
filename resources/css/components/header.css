@@ -23,6 +23,12 @@
     text-decoration: none;
 }
 
+.site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
 .site-header__toggle {
     min-height: var(--tap-target);
     padding-inline: var(--space-4);
@@ -78,8 +84,22 @@
     }
 }
 
-/* Desktop: menu horizontal, tombol disembunyikan */
+/* Desktop: merek | menu | pemilih bahasa, tombol menu disembunyikan */
 @media (min-width: 768px) {
+    .site-header__brand {
+        order: 1;
+    }
+
+    .site-nav {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .site-header__actions {
+        order: 3;
+        margin-left: var(--space-6);
+    }
+
     .site-header__toggle {
         display: none;
     }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@hasSection('title')@yield('title') — @endif{{ config('app.name') }}</title>
-    <meta name="description" content="@yield('description', 'DARETODAZE adalah majalah digital independen tentang fashion, seni visual, dan budaya internet.')">
+    <meta name="description" content="@yield('description', __('site.description'))">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <a class="skip-link" href="#main">{{ __('nav.skip') }}</a>
 
     <x-header />
 
